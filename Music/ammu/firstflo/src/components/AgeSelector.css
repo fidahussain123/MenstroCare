@@ -1,0 +1,55 @@
+.age-selector {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.age-selector h1 {
+  font-size: 3rem;
+  color: #ff69b4;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.age-selector p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.age-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.age-button {
+  background: white;
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.age-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.age-button h2 {
+  color: #ff69b4;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.age-button p {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+} 

@@ -1,0 +1,98 @@
+.period-tracker {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.calendar-container {
+  margin: 20px 0;
+}
+
+.custom-calendar {
+  width: 100%;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.period-log {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.log-button {
+  background: #ff69b4;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.log-button:hover {
+  background: #ff4da6;
+}
+
+.period-history {
+  margin-top: 30px;
+}
+
+.history-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.history-item {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.history-item .date {
+  color: #ff69b4;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.history-item .mood,
+.history-item .symptoms {
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Calendar customization */
+.react-calendar__tile--active {
+  background: #ff69b4 !important;
+}
+
+.react-calendar__tile--now {
+  background: #ffe6f0 !important;
+}
+
+.react-calendar__navigation button {
+  color: #ff69b4;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #ffe6f0;
+} 

@@ -1,0 +1,155 @@
+.quiz-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.question-section {
+  margin-bottom: 20px;
+}
+
+.question-count {
+  font-size: 1.2rem;
+  color: #ff69b4;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.answer-section {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.answer-button {
+  background: white;
+  border: 2px solid #ff69b4;
+  color: #ff69b4;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.answer-button:hover:not(:disabled) {
+  background: #ff69b4;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.answer-button.correct {
+  background: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+  animation: correctAnswer 0.5s ease;
+}
+
+.answer-button.incorrect {
+  background: #f44336;
+  border-color: #f44336;
+  color: white;
+  animation: incorrectAnswer 0.5s ease;
+}
+
+@keyframes correctAnswer {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes incorrectAnswer {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.explanation {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #666;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.score-section {
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.score-section h2 {
+  color: #ff69b4;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.score-message {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 20px 0;
+}
+
+.restart-button {
+  background: #ff69b4;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restart-button:hover {
+  background: #ff4da6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+} 

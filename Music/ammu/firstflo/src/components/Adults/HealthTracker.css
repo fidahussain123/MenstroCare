@@ -1,0 +1,388 @@
+.health-tracker {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.tabs {
+  display: flex;
+  background: #f8f9fa;
+  padding: 15px;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: #666;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.tab:hover {
+  background: #ff69b4;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.tab.active {
+  background: #ff69b4;
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+}
+
+.content {
+  padding: 30px;
+}
+
+/* Period Tracker Styles */
+.tracker-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.symptom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.symptom-checkbox:hover {
+  background: #ff69b4;
+  color: white;
+}
+
+.flow-buttons, .mood-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.flow-button, .mood-button {
+  padding: 8px 16px;
+  border: 2px solid #eee;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.flow-button:hover, .mood-button:hover {
+  border-color: #ff69b4;
+  color: #ff69b4;
+}
+
+.flow-button.active, .mood-button.active {
+  background: #ff69b4;
+  color: white;
+  border-color: #ff69b4;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #ff4da6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+}
+
+/* Info Section Styles */
+.info-section {
+  display: grid;
+  gap: 20px;
+}
+
+.info-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  animation: slideUp 0.5s ease;
+}
+
+.info-card h4 {
+  color: #ff69b4;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.info-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  color: #333;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.info-card li:before {
+  content: "•";
+  color: #ff69b4;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .health-tracker {
+    margin: 10px;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .symptoms-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  
+  .tab {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Log History Styles */
+.log-history {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.log-history h3 {
+  color: #ff69b4;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.history-filters {
+  margin-bottom: 20px;
+}
+
+.date-filter {
+  padding: 8px 16px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.history-entries {
+  display: grid;
+  gap: 20px;
+}
+
+.history-entry {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  animation: slideUp 0.5s ease;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.entry-date {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.entry-flow {
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.entry-flow.light {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.entry-flow.medium {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.entry-flow.heavy {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.entry-details {
+  display: grid;
+  gap: 15px;
+}
+
+.entry-section h4 {
+  color: #666;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.symptoms-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.symptom-tag {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.mood-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.mood-tag.happy {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.mood-tag.neutral {
+  background: #f5f5f5;
+  color: #616161;
+}
+
+.mood-tag.sad {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.mood-tag.irritable {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.mood-tag.anxious {
+  background: #fce4ec;
+  color: #c2185b;
+}
+
+.entry-notes {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.no-entries {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.notes-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.notes-input:focus {
+  outline: none;
+  border-color: #ff69b4;
+  box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1);
+} 
